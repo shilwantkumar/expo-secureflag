@@ -1,0 +1,42 @@
+{
+  "name": "expo-secureflag",
+  "version": "1.1.0",
+  "description": "This module used for enable/disable app preview feature",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "open -a \"Xcode\" example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-secureflag",
+    "ExpoSecureflag"
+  ],
+  "repository": "https://github.com/shilwantkumar/expo-secureflag.git",
+  "bugs": {
+    "url": "https://github.com/shilwantkumar/expo-secureflag.git/issues"
+  },
+  "author": "Shilwant Kumar <shilwant.kumar@techconative.com> (https://github.com/shilwantkumar)",
+  "license": "MIT",
+  "homepage": "https://github.com/shilwantkumar/expo-secureflag.git#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "expo-module-scripts": "^3.0.11",
+    "expo-modules-core": "^1.5.7"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}
