@@ -1,3 +1,4 @@
+
 # expo-secureflag
 
 This module used for enable/disable app preview feature
@@ -21,6 +22,42 @@ For bare React Native projects, you must ensure that you have [installed and con
 npm install expo-secureflag
 ```
 
+### Use ExpoSecureflag in your expo app (`App.js`)
+
+```javascript
+import * as ExpoSecureflag from "expo-secureflag";
+import React from "react";
+import { Text, View, Button } from "react-native";
+
+export default function App() {
+  const [isEnabled, setIsEnabled] = React.useState(true);
+  const disableFunc = () => {
+    ExpoSecureflag.activate();
+    setIsEnabled(false);
+  };
+
+  const enableFunc = () => {
+    ExpoSecureflag.deactivate();
+    setIsEnabled(true);
+  };
+
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>App preview: {isEnabled?'Enabled':'Disabled'}</Text>
+      {isEnabled ? (
+        <View style={{ width: "200px", marginTop: 20 }}>
+          <Button title="Disable App preview" onPress={disableFunc} />
+        </View>
+      ) : (
+        <View style={{ width: "200px", marginTop: 20 }}>
+          <Button title="Enable App preview" onPress={enableFunc} />
+        </View>
+      )}
+    </View>
+  );
+}
+
+```
 ### Configure for iOS
 
 Run `npx pod-install` after installing the npm package.
@@ -33,3 +70,4 @@ Run `npx pod-install` after installing the npm package.
 # Contributing
 
 Contributions are very welcome! Please refer to guidelines described in the [contributing guide]( https://github.com/expo/expo#contributing).
+

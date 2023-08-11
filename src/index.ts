@@ -1,6 +1,10 @@
 
 import ExpoSecureflagModule from './ExpoSecureflagModule';
 
-export function hello(): string {
-  return ExpoSecureflagModule.hello();
+export function activate(){
+    return ExpoSecureflagModule.activate();
+}
+
+export function deactivate(){
+    return ExpoSecureflagModule.deactivate();
 }

@@ -1,6 +1,6 @@
 {
   "name": "expo-secureflag",
-  "version": "1.1.0",
+  "version": "1.5.0",
   "description": "This module used for enable/disable app preview feature",
   "main": "build/index.js",
   "types": "build/index.d.ts",
